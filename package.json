@@ -1,0 +1,26 @@
+{
+  "name": "calculations",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "concurrently": "^3.4.0",
+    "mathjs": "^3.12.2",
+    "node-sass": "^4.5.2",
+    "nodemon": "^1.11.0",
+    "react": "^15.5.4",
+    "react-addons-update": "^15.5.2",
+    "react-dom": "^15.5.4"
+  },
+  "devDependencies": {
+    "react-scripts": "0.9.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "build-css": "node-sass --include-path scss src/App.scss src/App.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "start-with-sass": "concurrently --kill-others \"npm run watch-css\" \"npm start\""
+  }
+}
